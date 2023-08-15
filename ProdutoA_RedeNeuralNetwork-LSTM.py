@@ -24,7 +24,7 @@ dataframe.info()
 dataframepos = (dataframe.groupby('DATA_DESEJADA_REM').QTDE_OV.sum().reset_index())
 
 print(dataframepos[:30])
-print(dataframepos[30:])
+
 print(dataframepos.info())
 #observação o dataframe inicia em 2016-01-12 e termina em 2022-01-05 e está com 1304 linhas.
 #se contarmos os dias corridos neste período serão: 2.185 dias
