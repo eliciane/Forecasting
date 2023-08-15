@@ -1,32 +1,20 @@
 
+
 #importando bibliotecas
 
 import pandas as pd
 import seaborn
 from dateutil.relativedelta import relativedelta
-
-pd.plotting.register_matplotlib_converters()
-from pmdarima import auto_arima
-
 import pmdarima as pm
-
-pd.plotting.register_matplotlib_converters()
-
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.tsa.statespace.tools import diff
-
-pd.plotting.register_matplotlib_converters()
 from datetime import datetime
-
 import numpy as np
 import statsmodels.api as sm
-
+from matplotlib import pyplot as plt
 pd.plotting.register_matplotlib_converters()
 
-
-from matplotlib import pyplot as plt
-
-df_mes = pd.read_excel('C:/Users/eliciane/PycharmProjects/excel/demandaMasterLPmensal_TCC.xlsx')
+df_mes = pd.read_excel('C:/Users/eliciane/PycharmProjects/excel/produtoA_nacional.xlsx')
 
 
 #ilustrando informações do dataset
@@ -66,16 +54,6 @@ plt.plot(ts)
 g = seaborn.boxplot(data=ts, showmeans=True)
 g.set_title('PRODUTO A - DEMANDA NACIONAL - OUTLIERS')
 plt.show()
-
-
-'''
-#graficos da decomposição
-plt.rcParams['figure.figsize'] = [20/10, 20/10]
-plt.title('MASTER LP - DECOMPOSIÇÃO DA DEMANDA', fontsize=20)
-result = seasonal_decompose(MasterLP_mes['QTDE_OV'], model='additive')
-result.plot()
-plt.show()
-'''
 
 
 def test_stationarity(ts):
