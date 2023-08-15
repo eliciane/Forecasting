@@ -14,7 +14,7 @@ import statsmodels.api as sm
 from matplotlib import pyplot as plt
 pd.plotting.register_matplotlib_converters()
 
-df_mes = pd.read_excel('C:/Users/eliciane/PycharmProjects/excel/produtoA_nacional.xlsx')
+df_mes = pd.read_excel('C:/Users/eliciane/PycharmProjects/excel/ProdutoA_nacional.xlsx')
 
 
 #ilustrando informações do dataset
